@@ -110,6 +110,7 @@
   width: 50%;
   margin: 0 auto;
   display: flex;
+  flex-direction:column;
   justify-content: space-around;
 }
 
@@ -117,8 +118,8 @@
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
 .awayButtons__fieldGoal,
-.miscButtons__point,
-.miscButtons__quarter {
+.homeButtons__extraPoint,
+.awayButtons__extraPoint {
   margin: 1rem;
   border-radius: 4px;
 }
