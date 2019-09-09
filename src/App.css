@@ -110,13 +110,16 @@
   width: 50%;
   margin: 0 auto;
   display: flex;
+  flex-direction:column;
   justify-content: space-around;
 }
 
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal,
+.homeButtons__extraPoint,
+.awayButtons__extraPoint {
   margin: 1rem;
   border-radius: 4px;
 }
