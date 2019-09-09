@@ -8,20 +8,26 @@ function App() {
   const [home_score, sethomeScore] = useState(0);
   const [away_score, setawayScore] = useState(0);
 
+  const [homeName, sethomeTeam] = useState();
+  const [awayName, setawayTeam] = useState();
+  const [timer, setTimer] = useState(0);
+  const [start_timer, setstartTime] = useState(0);
+  const [stop_timer, setstopTime] = useState(0);
+
   return (
     <div className="container">
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <h2 className="home__name">{homeName}</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
             <div className="home__score">{home_score}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{timer}</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
+            <h2 className="away__name">{awayName}</h2>
             <div className="away__score">{away_score}</div>
           </div>
         </div>
@@ -36,6 +42,8 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setawayScore(away_score + 6)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setawayScore(away_score + 3)}>Away Field Goal</button>
+          <button className="start__timer" onClick={() => setstartTime(start_timer)}>Start Timer</button>
+          <button className="stop__timer" onClick={() => setstopTime(stop_timer)}>Stop Timer</button>
         </div>
       </section>
     </div>
