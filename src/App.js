@@ -42,6 +42,7 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setawayScore(away_score + 6)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setawayScore(away_score + 3)}>Away Field Goal</button>
+          {/* starting my own code here */}
           <button className="start__timer" onClick={() => setstartTime(start_timer)}>Start Timer</button>
           <button className="stop__timer" onClick={() => setstopTime(stop_timer)}>Stop Timer</button>
         </div>
